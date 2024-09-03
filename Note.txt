@@ -1,0 +1,10 @@
+贪吃蛇游戏
+---框架的搭建:
+1,首先要自定义场景(自己写一个类继承QGraphicsScene，然后重写，实现自己的要求)
+
+---游戏运行的代码:
+1,需要用的基本图元及容器是QList<QGraphicsRectItem*>(用于存储蛇的身体),QGraphicsSimpleTextItem*
+(用于文本显示)和QGraphicsSimpleTextItem*(分数显示).
+2,需要定时器，在timerEvent中对每一帧进行坐标的改变
+3,注意内部矩形的坐标与全局坐标的差别,注意坐标随机数的生成写法(参考:
+QPointF(random()%static_cast<int>(width()/10)*10,random()%static_cast<int>(height()/10)*10))
